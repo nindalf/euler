@@ -1,12 +1,6 @@
-import math
-import timeit
-
 """
-This method proved too slow. Better to set it to -1 rather than removing the value from the sieve list.
-	try:
-		sieve.remove(current)
-	except ValueError:
-		pass #its already been removed
+These 2 functions copied from problem 3
+
 """
 
 def eratosthenes(sieve, prime, limit):
@@ -17,7 +11,7 @@ def eratosthenes(sieve, prime, limit):
 		current = current + prime
 
 
-def prime_generator(limit = 100000):
+def prime_generator(limit = 1000000):
 	"""Yields a generator of prime numbers upto the limit."""
 	sieve = [i for i in range(0, limit+1)]
 	for i in sieve:
@@ -27,12 +21,12 @@ def prime_generator(limit = 100000):
 
 
 def main():
-	dividend = 600851475143 #from the problem
-	primelimit = math.floor(math.sqrt(dividend))
-	for prime in prime_generator(primelimit):
-		if dividend % prime == 0:
+	index = 0
+	for prime in prime_generator():
+		index = index + 1 		
+		if index == 10001:
 			answer = prime
-	print("Divisble by", answer)
+	print("10001th prime -", answer)
 
 
 if __name__ == "__main__":
