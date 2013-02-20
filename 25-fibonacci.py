@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-
+"""
+Searched online for a better way of knowing the index of the current iteration.
+Found that the enumerate() function does just that
+"""
 def fibonacci():
 	current = 0 
 	previous = 1
@@ -12,10 +15,9 @@ def fibonacci():
 
 
 def main():
-	divisor = 10**1000
+	divisor = 10**999
 	for index, element in enumerate(fibonacci()):
-		if element//divisor > 0:
-			print(element)
+		if element >= divisor:
 			answer = index 
 			break
 	print(answer)
