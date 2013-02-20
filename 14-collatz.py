@@ -1,3 +1,9 @@
+#! /usr/bin/env python3
+"""
+Love this problem. Had a great time solving it.
+
+"""
+
 precomputed = {1: 1}
 
 def collatz_successor(x):

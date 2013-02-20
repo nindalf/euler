@@ -1,6 +1,16 @@
+#! /usr/bin/env python3
 """
-These 2 functions copied from problem 3
+Important concept: DRY - Don't repeat yourself.
+These 2 functions copied from problem 3.
 
+Program improved after learning the enumerate() function.
+Earlier the main() function looked like
+index = 0
+for prime in prime_generator():
+	index = index + 1
+
+The current method is more pythonic.
+	
 """
 
 def eratosthenes(sieve, prime, limit):
@@ -21,10 +31,8 @@ def prime_generator(limit = 1000000):
 
 
 def main():
-	index = 0
-	for prime in prime_generator():
-		index = index + 1 		
-		if index == 10001:
+	for index, prime in enumerate(prime_generator()):
+		if index == 10000: #index starts from 0
 			answer = prime
 	print("10001th prime -", answer)
 

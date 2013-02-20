@@ -1,5 +1,11 @@
+#! /usr/bin/env python3
+"""
+First time I used a generator in Python. Also took the opportunity to learn 
+how iterators in general work.
+
+"""
+
 def fibonacci():
-	#First time trying out an iterator
 	current = 0
 	previous = 1
 	while True:

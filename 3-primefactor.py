@@ -2,11 +2,18 @@ import math
 import timeit
 
 """
-This method proved too slow. Better to set it to -1 rather than removing the value from the sieve list.
+This method proved too slow. Better to set it to -1 rather than removing the 
+value from the sieve list.
 	try:
 		sieve.remove(current)
 	except ValueError:
 		pass #its already been removed
+When the list is really long, resizing it appears to be too expensive.
+The program now "removes" numbers from the list by setting them as -1.
+
+The generator that I learnt in the previous program is used to good effect here.
+The difference between euler and other sites is that I'm actually improving my
+knowledge of python as I solve problems.
 """
 
 def eratosthenes(sieve, prime, limit):
